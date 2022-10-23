@@ -19,6 +19,8 @@ THEN I can save my initials and score
 ```
 
 ## Application URL
+Please use the following link to open the application:<br>
+[URL](https://iamlucho.github.io/code-quiz/)
 
 ## Screenshot
 The following animation demonstrates the application functionality:
