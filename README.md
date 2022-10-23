@@ -1,7 +1,13 @@
 # Web APIs Challenge: Code Quiz
-
+## Description
+Javascript application in HTML to generate a multiple choice quiz, track time and record results.
 
 ## User Story
+```
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+```
 
 ## Acceptance Criteria
 ```
