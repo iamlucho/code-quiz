@@ -1,0 +1,19 @@
+h1 {
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+.btn {
+    background-color: #351c75; /* Purple */
+    border: none;
+    color: white; /* Pink */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.btn:hover {
+    background-color: #bd60e7; /* Pink d9d3e9*/
+    color: white;
+  }
