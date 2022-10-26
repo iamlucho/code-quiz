@@ -26,6 +26,33 @@
       </div>
     </header>
     <!-- End of Header -->
+    <!-- Begin Page Content -->
+    <main>
+      <div class="container">
+        <!--Section for introduction // Hide after start of quiz -->
+        <section id="intro">
+          <div class="row">
+            <h1 class="d-flex justify-content-center text-center">Coding Quiz Challenge</h1>
+            <p class="d-flex justify-content-center text-center">Try to answer the following javascript code questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="start" type="button" class="btn">Start Quiz</button>
+          </div>
+        </section>
+      
+        <!--Section for questions // Show after start of quiz // Update once question is answered-->
+        <section id="questions">
+          <div class="row">
+            <h1 class="d-flex justify-content-center text-center">Question text</h1>
+            <ul>
+              <li><button id="answer1" value="0" type="button" class="btn btnAnswers">Answer1</button></li>
+              <li><button id="answer2" value="1" type="button" class="btn btnAnswers">Answer2</button></li>
+              <li><button id="answer3" value="2" type="button" class="btn btnAnswers">Answer3</button></li>
+              <li><button id="answer4" value="3" type="button" class="btn btnAnswers">Answer4</button></li>
+            </ul>
+            <div class="results">  
+              <!-- Correct or Wrong will be added via JS --> 
+             </div>
+        </section>
+
 
 
 
