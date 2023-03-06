@@ -18,6 +18,13 @@ h1 {
     color: white;
   }
 
+ul {
+    list-style-type: none;
+  }
+li {
+  padding: 5px;
+  }
+
 #questions {
   display: none;
 }
