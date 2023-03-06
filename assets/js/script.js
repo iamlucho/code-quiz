@@ -102,12 +102,54 @@ function checkAnswer(event) {
   document.getElementById('answer4').addEventListener('click', checkAnswer);
 
   function endQuiz() {
+    clearInterval(timerId);
     document.getElementById('score').textContent = timeLeft;
     document.getElementById("questions").style.display = "none";
     document.getElementById("finalscore").style.display = "block";
+    let submitForm = document.getElementById("submit-score");
+    let initialsInput = document.getElementById('initials');
+    submitForm.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById("finalscore").style.display = "none";
+        var initials = initialsInput.value.trim();
+        if (initials) {
+          var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+          highScores.push({ initials: initials, score: timeLeft });
+          localStorage.setItem('highScores', JSON.stringify(highScores));
+          displayHighScores();
+        } else {
+          displayHighScores();
+        }
+      });
+      
 }
 
 };
+
+// Display high scores
+function displayHighScores() {
+    let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    let highScoresList = document.getElementById('score-list');
+    highScoresList.innerHTML = "";
+    for (let i = 0; i < highScores.length; i++) {
+      let listItem = document.createElement('li');
+      listItem.textContent = highScores[i].initials + " - " + highScores[i].score;
+      highScoresList.appendChild(listItem);
+    }
+    document.getElementById('highscores').style.display = "block";
+
+    let clearHighScoresBtn = document.getElementById('clearscores');
+    // Clear high scores
+    clearHighScoresBtn.addEventListener('click', function() {
+        localStorage.removeItem('highScores');
+        displayHighScores();
+    });
+    let goBackBtn = document.getElementById('goback'); 
+      // Go back button
+      goBackBtn.addEventListener('click', function() {
+        location.reload();
+      });
+  }
 
 
 
