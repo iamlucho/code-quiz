@@ -34,3 +34,6 @@ li {
 #highscores{
   display: none;
 }
+#intro {
+  display: block;
+}

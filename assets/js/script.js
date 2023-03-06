@@ -41,6 +41,7 @@ startButton.addEventListener("click", function () {
 
 function startQuiz() {
   // Set the timer for the quiz
+  document.getElementById("intro").style.display = "none";
   let timeLeft = 75;
   const timerEl = document.getElementById("timer");
   const timerId = setInterval(function () {
@@ -128,6 +129,7 @@ function checkAnswer(event) {
 
 // Display high scores
 function displayHighScores() {
+    document.getElementById("intro").style.display = "none";
     let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     let highScoresList = document.getElementById('score-list');
     highScoresList.innerHTML = "";
