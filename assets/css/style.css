@@ -17,3 +17,13 @@ h1 {
     background-color: #bd60e7; /* Pink d9d3e9*/
     color: white;
   }
+
+#questions {
+  display: none;
+}
+#finalscore {
+  display: none;
+}
+#highscores{
+  display: none;
+}

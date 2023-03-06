@@ -30,3 +30,47 @@ const questions = [
     answer: "console.log",
   },
 ];
+
+// Start the quiz when the Start button is clicked
+const startButton = document.getElementById("start");
+startButton.addEventListener("click", function() {
+  startQuiz();
+});
+
+function startQuiz() {
+    // Set the timer for the quiz
+    let timeLeft = 75;
+    const timerEl = document.getElementById("timer");
+    const timerId = setInterval(function() {
+        timeLeft--;
+        timerEl.textContent = `Time left: ${timeLeft}`;
+        if (timeLeft <= 0) {
+            clearInterval(timerId);
+            endQuiz();
+        }
+    }, 1000);
+
+    // Display the first question
+    let currentQuestion = 0;
+    displayQuestion();
+    
+    // Display the current question and choices
+    function displayQuestion() {
+        let question = questions[currentQuestion].question;
+        let choices = questions[currentQuestion].choices;
+    
+      document.getElementById('question').textContent = question;
+      document.getElementById('answer1').textContent = choices[0];
+      document.getElementById('answer2').textContent = choices[1];
+      document.getElementById('answer3').textContent = choices[2];
+      document.getElementById('answer4').textContent = choices[3];
+    
+      document.getElementById('questions').style.display = "block";
+      document.getElementById('question').style.display = "block";
+      }
+
+};
+
+
+
+
