@@ -73,13 +73,16 @@ function startQuiz() {
 
 // Check answer and switch to next question
 function checkAnswer(event) {
-    var selectedChoice = event.target;
-    var answer = questions[currentQuestion].answer;
+    let selectedChoice = event.target;
+    let feedbackEl = document.getElementById('feedback');
+    let answer = questions[currentQuestion].answer;
   
     if (selectedChoice.textContent === answer) {
       // The answer is correct
+      feedbackEl.textContent = 'Correct!';
     } else {
       // The answer is wrong
+      feedbackEl.textContent = 'Wrong!';
       timeLeft -= 10;
       if (timeLeft < 0) {
         timeLeft = 0;

@@ -3,6 +3,11 @@ h1 {
     font-family: 'Roboto Condensed', sans-serif;
   }
 
+h3 {
+  font-style: italic;
+  color: grey;
+  }
+
 .btn {
     background-color: #351c75; /* Purple */
     border: none;
@@ -11,6 +16,7 @@ h1 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin: 5px;
   }
 
 .btn:hover {
