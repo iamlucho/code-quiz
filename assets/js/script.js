@@ -133,6 +133,8 @@ function checkAnswer(event) {
 // Display high scores
 function displayHighScores() {
     document.getElementById("intro").style.display = "none";
+    document.getElementById("finalscore").style.display = "none";
+    document.getElementById("questions").style.display = "none";
     let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     let highScoresList = document.getElementById('score-list');
     highScoresList.innerHTML = "";
